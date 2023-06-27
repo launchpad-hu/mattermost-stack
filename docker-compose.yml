@@ -17,10 +17,10 @@ services:
     restart: ${RESTART_POLICY}
     security_opt:
       - no-new-privileges:true
-    read_only: true
-    tmpfs:
-      - /tmp
-      - /var/run/postgresql
+    #read_only: true
+    #tmpfs:
+      #- /tmp
+      #- /var/run/postgresql
     volumes:
       - db:/var/lib/postgresql/data
     environment:
