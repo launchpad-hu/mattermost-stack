@@ -79,7 +79,7 @@ services:
         - "traefik.http.routers.${APP}.entrypoints=https"
         - "traefik.http.routers.${APP}.tls.certresolver=leresolver"
         - "traefik.http.routers.${APP}.service=${APP}"
-        - "traefik.http.services.${APP}.loadbalancer.server.port=80"
+        - "traefik.http.services.${APP}.loadbalancer.server.port=8065"
         - "traefik.docker.network=traefik-net"
 
 # If you use rolling image tags and feel lucky watchtower can automatically pull new images and
