@@ -87,6 +87,7 @@ services:
         - "traefik.enable=true"
         - "traefik.http.routers.${APP}.rule=Host(`${DOMAIN}`)"
         - "traefik.http.routers.${APP}.entrypoints=https"
+        - "traefik.http.routers.${APP}.tls=true"
         - "traefik.http.routers.${APP}.tls.certresolver=leresolver"
         - "traefik.http.routers.${APP}.service=${APP}"
         - "traefik.http.services.${APP}.loadbalancer.server.port=8065"
