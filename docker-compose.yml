@@ -3,6 +3,7 @@
 version: "3.1"
 
 volumes:
+  db:
   config:
   data:
   logs:
@@ -21,7 +22,7 @@ services:
       - /tmp
       - /var/run/postgresql
     volumes:
-      - ${POSTGRES_DATA_PATH}:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
     environment:
       # timezone inside container
       - TZ
